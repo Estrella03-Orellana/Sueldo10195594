@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Sueldo10195594.ViewModel"
+             x:Class="Sueldo10195594.MainPage"
+             Title="Sueldo del Trabajador">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel></viewmodel:MainViewModel>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0"  Spacing="25">
+            <Label Text="Digite el sueldo del trabajador:"/>
+            <Entry Text="{Binding SueldoTrabajador}"/>
+
+            <Label Text="Nuevo Sueldo:"/>
+            <Entry Text="{Binding TotalSueldo}"/>
+
+            <Button Text="Calcular Aumento" Command="{Binding AumentoSueldoCommand}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
